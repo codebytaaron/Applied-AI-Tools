@@ -19,10 +19,3 @@ Built as a practical, no-frills system focused on signal, not hype.
 - Web-based UI with a simple API-driven backend
 
 No accounts. No tracking. No external AI APIs.
-
----
-
-## How it works
-
-### High-level pipeline
-
