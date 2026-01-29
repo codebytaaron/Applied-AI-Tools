@@ -1,0 +1,24 @@
+ranklist-cli/
+  package.json
+  README.md
+  bin/
+    ranklist.js
+  src/
+    index.js
+    parse.js
+    output.js
+{
+  "name": "ranklist-cli",
+  "version": "1.0.0",
+  "description": "Convert ranking lists (TSV, CSV, markdown tables, or spaced text) into JSON/CSV.",
+  "type": "module",
+  "bin": {
+    "ranklist": "./bin/ranklist.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node ./bin/ranklist.js"
+  },
+  "keywords": ["rankings", "csv", "json", "cli", "tennis"],
+  "license": "MIT"
+}
