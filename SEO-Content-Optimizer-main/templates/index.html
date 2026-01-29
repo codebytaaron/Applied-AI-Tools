@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEO Content Optimizer (Lite)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>SEO Content Optimizer (Lite)</h1>
+    <p class="sub">Paste content, add a target keyword, and get instant feedback.</p>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>Input</h2>
+
+      <label class="lbl">Target keyword</label>
+      <input id="target" class="inp" placeholder="example: home services marketing" />
+
+      <label class="lbl">Related keywords (comma separated)</label>
+      <input id="related" class="inp" placeholder="example: local seo, google business profile, leads" />
+
+      <label class="lbl">Meta title (optional)</label>
+      <input id="metaTitle" class="inp" placeholder="example: Home Services Marketing Guide" />
+
+      <label class="lbl">Meta description (optional)</label>
+      <input id="metaDesc" class="inp" placeholder="example: Simple steps to get more leads with local SEO and ads." />
+
+      <label class="lbl">Content</label>
+      <textarea id="content" class="ta" placeholder="Paste your article or landing page copy here..."></textarea>
+
+      <div class="row">
+        <button id="analyzeBtn" class="btn">Analyze</button>
+        <button id="sampleBtn" class="btn ghost">Load sample</button>
+        <span id="status" class="status"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+
+      <div class="two">
+        <div class="mini">
+          <h3>Stats</h3>
+          <div id="stats" class="mono muted">No results yet.</div>
+        </div>
+        <div class="mini">
+          <h3>Readability</h3>
+          <div id="readability" class="mono muted">No results yet.</div>
+        </div>
+      </div>
+
+      <div class="mini">
+        <h3>Headings</h3>
+        <div id="headings" class="mono muted">No results yet.</div>
+      </div>
+
+      <div class="mini">
+        <h3>Keywords</h3>
+        <div id="keywords" class="mono muted">No results yet.</div>
+      </div>
+
+      <div class="mini">
+        <h3>Suggestions</h3>
+        <ul id="suggestions" class="list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span class="muted">Built with Python, Flask, HTML, CSS, and JavaScript.</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

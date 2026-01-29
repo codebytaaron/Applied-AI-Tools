@@ -1,0 +1,8 @@
+seo-content-optimizer/
+├── app.py
+├── requirements.txt
+├── templates/
+│   └── index.html
+└── static/
+    ├── style.css
+    └── app.js
