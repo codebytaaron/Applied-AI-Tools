@@ -1,0 +1,233 @@
+{
+  "name": "Zylos - AI Onboarding Assistant + 7-Day Success Plan",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "zylos/onboarding/new-user",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "WebhookTrigger",
+      "name": "Webhook (New User Signup)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 260]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            { "name": "user_id", "value": "={{$json.body.user_id || $json.user_id || ''}}" },
+            { "name": "email", "value": "={{$json.body.email || $json.email || ''}}" },
+            { "name": "name", "value": "={{$json.body.name || $json.name || ''}}" },
+            { "name": "company", "value": "={{$json.body.company || $json.company || ''}}" },
+            { "name": "industry", "value": "={{$json.body.industry || $json.industry || ''}}" },
+            { "name": "goal", "value": "={{$json.body.goal || $json.goal || ''}}" },
+            { "name": "time_per_week", "value": "={{$json.body.time_per_week || $json.time_per_week || ''}}" },
+            { "name": "current_tools", "value": "={{$json.body.current_tools || $json.current_tools || ''}}" },
+            { "name": "biggest_blocker", "value": "={{$json.body.biggest_blocker || $json.biggest_blocker || ''}}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "Normalize",
+      "name": "Normalize Payload",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [520, 260]
+    },
+    {
+      "parameters": {
+        "resource": "text",
+        "operation": "message",
+        "model": "gpt-4.1-mini",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are an onboarding coach for Zylos. Create a practical, motivating 7-day plan. Keep it simple, measurable, and realistic. Return ONLY valid JSON."
+          },
+          {
+            "role": "user",
+            "content": "User onboarding data:\nName: {{$json.name}}\nCompany: {{$json.company}}\nIndustry: {{$json.industry}}\nGoal: {{$json.goal}}\nTime per week: {{$json.time_per_week}}\nCurrent tools: {{$json.current_tools}}\nBiggest blocker: {{$json.biggest_blocker}}\n\nGenerate JSON with this schema:\n{\n  \"summary\": \"1-2 sentences of what they will achieve\",\n  \"success_metric\": \"one metric\",\n  \"questions_to_confirm\": [\"optional 0-3 questions if missing data\"],\n  \"plan\": [\n    {\n      \"day\": 1,\n      \"title\": \"short\",\n      \"tasks\": [\"3-5 tasks max\"],\n      \"estimated_minutes\": 30,\n      \"deliverable\": \"what they will have by end of day\"\n    }\n  ],\n  \"check_in_message\": \"short friendly message to send on day 3\",\n  \"resources\": [\"3-6 resources generic, no links\"]\n}\nRules:\n- Each day must be achievable in 20-60 minutes.\n- Tasks must be specific, not vague.\n- Make it tailored to the goal and blocker.\n"
+          }
+        ]
+      },
+      "id": "PlanGenerator",
+      "name": "OpenAI (Generate 7-Day Plan)",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 4,
+      "position": [780, 260]
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json;\nlet content = raw?.choices?.[0]?.message?.content || raw?.data || raw;\nif (typeof content === 'string') {\n  content = content.trim();\n}\nlet plan;\ntry {\n  plan = typeof content === 'string' ? JSON.parse(content) : content;\n} catch (e) {\n  throw new Error('OpenAI output was not valid JSON. Output: ' + content);\n}\nreturn [{ json: { ...$json, onboarding_plan: plan } }];"
+      },
+      "id": "ParseJSON",
+      "name": "Function (Parse Plan JSON)",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 2,
+      "position": [1040, 260]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "append",
+        "sheetId": "={{$env.GSHEET_ID}}",
+        "range": "Onboarding!A:Z",
+        "options": {
+          "valueInputMode": "USER_ENTERED"
+        },
+        "dataToSend": "autoMapInputData",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "A": "={{$json.user_id}}",
+            "B": "={{$json.email}}",
+            "C": "={{$json.name}}",
+            "D": "={{$json.company}}",
+            "E": "={{$json.industry}}",
+            "F": "={{$json.goal}}",
+            "G": "={{$json.time_per_week}}",
+            "H": "={{$json.biggest_blocker}}",
+            "I": "={{JSON.stringify($json.onboarding_plan)}}"
+          }
+        }
+      },
+      "id": "SheetsAppend",
+      "name": "Google Sheets (Log Onboarding)",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [1300, 260]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{$env.SENDER_EMAIL}}",
+        "toEmail": "={{$json.email}}",
+        "subject": "={{'Your 7-day Zylos plan: ' + ($json.onboarding_plan.plan?.[0]?.title || 'Get Started')}}",
+        "text": "={{\n`Hi ${$json.name || 'there'},\\n\\n${$json.onboarding_plan.summary}\\n\\nSuccess metric: ${$json.onboarding_plan.success_metric}\\n\\nHere is your 7-day plan:\\n\\n` +\n($json.onboarding_plan.plan || []).map(d =>\n  `Day ${d.day}: ${d.title}\\n- ` + (d.tasks || []).join('\\n- ') + `\\nTime: ${d.estimated_minutes} min\\nDeliverable: ${d.deliverable}\\n`\n).join('\\n') +\n`\\nIf you want, reply with 1 thing you are stuck on and I will adjust the plan.\\n\\n-Zylos`\n}}"
+      },
+      "id": "SendEmail",
+      "name": "Email (Send Plan)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1560, 260]
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "days"
+      },
+      "id": "Wait3Days",
+      "name": "Wait (3 days)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [1820, 260]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{$env.SENDER_EMAIL}}",
+        "toEmail": "={{$json.email}}",
+        "subject": "Quick check-in on your Zylos plan",
+        "text": "={{\n`Hi ${$json.name || 'there'},\\n\\n` +\n($json.onboarding_plan.check_in_message || 'How is it going so far? Reply with what is working and what is stuck, and I will adjust the next steps.') +\n`\\n\\nIf you reply with: \\n1) what you completed\\n2) what blocked you\\n3) your time this week\\nI will rewrite days 4-7 for you.\\n\\n-Zylos`\n}}"
+      },
+      "id": "CheckInEmail",
+      "name": "Email (Day 3 Check-in)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [2080, 260]
+    }
+  ],
+  "connections": {
+    "Webhook (New User Signup)": {
+      "main": [
+        [
+          {
+            "node": "Normalize Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Payload": {
+      "main": [
+        [
+          {
+            "node": "OpenAI (Generate 7-Day Plan)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI (Generate 7-Day Plan)": {
+      "main": [
+        [
+          {
+            "node": "Function (Parse Plan JSON)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function (Parse Plan JSON)": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets (Log Onboarding)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets (Log Onboarding)": {
+      "main": [
+        [
+          {
+            "node": "Email (Send Plan)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email (Send Plan)": {
+      "main": [
+        [
+          {
+            "node": "Wait (3 days)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait (3 days)": {
+      "main": [
+        [
+          {
+            "node": "Email (Day 3 Check-in)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionTimeout": 3600,
+    "saveExecutionProgress": true,
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all"
+  },
+  "versionId": "1",
+  "meta": {
+    "templateCredsSetup": "Set env vars: GSHEET_ID, SENDER_EMAIL. Configure Google Sheets OAuth2 + Email Send credentials."
+  },
+  "pinData": {}
+}

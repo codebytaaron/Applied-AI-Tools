@@ -1,0 +1,11 @@
+{
+  "user_id": "123",
+  "email": "person@example.com",
+  "name": "Sam",
+  "company": "Acme",
+  "industry": "ecommerce",
+  "goal": "get first 50 customers",
+  "time_per_week": "3 hours",
+  "current_tools": "Shopify, Instagram",
+  "biggest_blocker": "no consistent content"
+}
