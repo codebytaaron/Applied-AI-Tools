@@ -1,0 +1,9 @@
+# Example input for SOP + Checklist Generator
+
+Paste real data here. The better the context, the better the output.
+
+- Company:
+- Context:
+- Constraints:
+- Desired outcome:
+- Raw notes / data:
