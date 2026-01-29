@@ -1,0 +1,6 @@
+lecture-notes-ai/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── config.example.py
