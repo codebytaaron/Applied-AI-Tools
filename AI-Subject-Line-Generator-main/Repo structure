@@ -1,0 +1,10 @@
+ai-subject-line-generator/
+  index.html
+  package.json
+  tsconfig.json
+  tsconfig.node.json
+  vite.config.ts
+  src/
+    main.tsx
+    App.tsx
+    styles.css
