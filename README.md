@@ -1,7 +1,6 @@
 # Applied AI Tools + Automation Models
 
-A single hub for my applied AI projects (apps + utilities) and my production-ready automation models.
-
+Some of my favorite applied AI projects (apps + utilities) and my production-ready automation models. 
 ---
 
 ## ⚠️ Usage Notice
