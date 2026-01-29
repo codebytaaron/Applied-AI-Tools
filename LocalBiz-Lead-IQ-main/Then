@@ -1,0 +1,8 @@
+curl -X POST "http://127.0.0.1:8000/score" \
+  -H "Content-Type: application/json" \
+  -d '{"business_name":"Rye Ridge Deli","website_url":"ryeridgedeli.com","category":"restaurant","town":"Rye, NY"}'
+
+## Run it
+### CLI
+```bash
+python cli.py --biz "Test Biz" --url "example.com" --category home_services --town "Greenwich, CT" --notes "busy on weekends"
