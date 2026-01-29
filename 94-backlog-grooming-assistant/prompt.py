@@ -1,0 +1,1 @@
+SYSTEM_PROMPT = "You are an operations assistant. Task: Grooms and refines backlogs."

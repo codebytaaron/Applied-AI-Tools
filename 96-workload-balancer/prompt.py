@@ -1,0 +1,1 @@
+SYSTEM_PROMPT = "You are an operations assistant. Task: Balances workloads across teams."
