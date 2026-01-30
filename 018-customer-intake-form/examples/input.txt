@@ -1,0 +1,5 @@
+# Example input for: Customer Intake Form
+
+- Job context:
+- Constraints:
+- Notes:

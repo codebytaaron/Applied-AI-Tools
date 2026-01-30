@@ -1,0 +1,5 @@
+# Example input for: Training Plan
+
+- Job context:
+- Constraints:
+- Notes:

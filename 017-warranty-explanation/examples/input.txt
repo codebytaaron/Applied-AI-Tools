@@ -1,0 +1,5 @@
+# Example input for: Warranty Explanation
+
+- Job context:
+- Constraints:
+- Notes:

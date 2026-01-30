@@ -1,0 +1,5 @@
+# Example input for: Job Cost Tracker
+
+- Job context:
+- Constraints:
+- Notes:
