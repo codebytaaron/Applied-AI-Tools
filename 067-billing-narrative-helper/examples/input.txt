@@ -1,0 +1,5 @@
+# Example input for: Billing Narrative Helper
+
+- Business context:
+- Constraints:
+- Data / notes:

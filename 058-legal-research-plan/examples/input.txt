@@ -1,0 +1,5 @@
+# Example input for: Legal Research Plan
+
+- Business context:
+- Constraints:
+- Data / notes:
