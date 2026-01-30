@@ -1,0 +1,5 @@
+# Example input for: Habit Tracker Plan
+
+- Context:
+- Constraints:
+- Raw notes:

@@ -1,0 +1,5 @@
+# Example input for: Testimonial Extractor
+
+- Context:
+- Constraints:
+- Raw notes:

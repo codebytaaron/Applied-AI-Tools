@@ -1,0 +1,5 @@
+# Example input for: Community Guidelines Writer
+
+- Context:
+- Constraints:
+- Raw notes:

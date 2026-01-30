@@ -1,0 +1,5 @@
+# Example input for: Event Run-of-Show Builder
+
+- Context:
+- Constraints:
+- Raw notes:

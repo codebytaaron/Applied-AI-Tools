@@ -1,0 +1,5 @@
+# Example input for: Study Plan Builder
+
+- Context:
+- Constraints:
+- Raw notes:

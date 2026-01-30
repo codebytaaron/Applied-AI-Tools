@@ -1,0 +1,5 @@
+# Example input for: Blog Outline Builder
+
+- Context:
+- Constraints:
+- Raw notes:

@@ -1,0 +1,5 @@
+# Example input for: SEO Brief Generator
+
+- Context:
+- Constraints:
+- Raw notes:
