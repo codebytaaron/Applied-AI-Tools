@@ -1,0 +1,5 @@
+# Example input for: UX Copy Polisher
+
+- Context:
+- Constraints:
+- Raw notes:

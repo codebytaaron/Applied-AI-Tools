@@ -1,0 +1,5 @@
+# Example input for: Customer Support Macro Writer
+
+- Context:
+- Constraints:
+- Raw notes:

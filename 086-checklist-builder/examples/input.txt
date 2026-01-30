@@ -1,0 +1,5 @@
+# Example input for: Checklist Builder
+
+- Context:
+- Constraints:
+- Raw notes:
