@@ -1,0 +1,25 @@
+name: Tiny suite
+cases:
+  - id: contains-headings
+    prompt: "Write a short plan to learn JavaScript in 4 weeks."
+    pass_score: 0.75
+    rules:
+      - type: regex
+        pattern: "week\s*1"
+        penalty: 0.7
+      - type: regex
+        pattern: "week\s*2"
+        penalty: 0.7
+      - type: max_words
+        n: 400
+        penalty: 0.8
+  - id: structured-output
+    prompt: "Draft a meeting agenda for a 30-minute standup style ops sync."
+    pass_score: 0.75
+    rules:
+      - type: contains
+        text: "Agenda"
+        penalty: 0.7
+      - type: regex
+        pattern: "timebox|minutes"
+        penalty: 0.7

@@ -1,0 +1,10 @@
+name: Sample pipeline
+steps:
+  - name: brief
+    prompt: |
+      Write a concise spec for a personal finance tracker app.
+      Include: features, API endpoints, and data model.
+  - name: checklist
+    prompt: |
+      Based on the following spec, produce a QA checklist with edge cases:
+      {{brief}}
