@@ -1,0 +1,5 @@
+# Example input for: Incident Report
+
+- Job context:
+- Constraints:
+- Notes:

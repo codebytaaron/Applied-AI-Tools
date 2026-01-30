@@ -1,0 +1,5 @@
+# Example input for: Weather Delay Notice
+
+- Job context:
+- Constraints:
+- Notes:

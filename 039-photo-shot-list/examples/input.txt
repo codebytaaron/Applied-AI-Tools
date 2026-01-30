@@ -1,0 +1,5 @@
+# Example input for: Photo Shot List
+
+- Job context:
+- Constraints:
+- Notes:

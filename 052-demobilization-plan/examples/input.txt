@@ -1,0 +1,5 @@
+# Example input for: Demobilization Plan
+
+- Job context:
+- Constraints:
+- Notes:

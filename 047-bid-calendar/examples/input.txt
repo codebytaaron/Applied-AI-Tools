@@ -1,0 +1,5 @@
+# Example input for: Bid Calendar
+
+- Job context:
+- Constraints:
+- Notes:
