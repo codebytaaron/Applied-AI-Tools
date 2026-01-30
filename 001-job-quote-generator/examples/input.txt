@@ -1,0 +1,5 @@
+# Example input for: Job Quote Generator
+
+- Job context:
+- Constraints:
+- Notes:

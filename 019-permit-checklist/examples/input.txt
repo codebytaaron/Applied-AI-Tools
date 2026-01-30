@@ -1,0 +1,5 @@
+# Example input for: Permit Checklist
+
+- Job context:
+- Constraints:
+- Notes:

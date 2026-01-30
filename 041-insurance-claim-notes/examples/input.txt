@@ -1,0 +1,5 @@
+# Example input for: Insurance Claim Notes
+
+- Job context:
+- Constraints:
+- Notes:

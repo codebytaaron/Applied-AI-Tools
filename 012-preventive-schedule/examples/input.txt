@@ -1,0 +1,5 @@
+# Example input for: Preventive Schedule
+
+- Job context:
+- Constraints:
+- Notes:

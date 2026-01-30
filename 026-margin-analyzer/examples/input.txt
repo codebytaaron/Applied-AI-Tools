@@ -1,0 +1,5 @@
+# Example input for: Margin Analyzer
+
+- Job context:
+- Constraints:
+- Notes:

@@ -1,0 +1,5 @@
+# Example input for: Dispatch Script
+
+- Job context:
+- Constraints:
+- Notes:

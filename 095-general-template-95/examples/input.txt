@@ -1,5 +1,5 @@
 # Example input for: General Template 95
 
-- Context:
+- Job context:
 - Constraints:
-- Raw notes:
+- Notes:

@@ -1,0 +1,5 @@
+# Example input for: Site Safety Checklist
+
+- Job context:
+- Constraints:
+- Notes:
