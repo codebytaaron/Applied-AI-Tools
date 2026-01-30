@@ -1,0 +1,5 @@
+# Example input for: Scope of Work Builder
+
+- Context:
+- Constraints:
+- Raw notes:

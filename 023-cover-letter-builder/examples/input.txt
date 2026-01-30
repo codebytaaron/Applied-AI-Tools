@@ -1,0 +1,5 @@
+# Example input for: Cover Letter Builder
+
+- Context:
+- Constraints:
+- Raw notes:
