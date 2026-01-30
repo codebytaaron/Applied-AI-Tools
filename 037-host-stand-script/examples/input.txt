@@ -1,0 +1,5 @@
+# Example input for: Host Stand Script
+
+- Business context:
+- Constraints:
+- Data / notes:

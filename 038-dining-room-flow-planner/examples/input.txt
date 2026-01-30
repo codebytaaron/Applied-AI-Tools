@@ -1,0 +1,5 @@
+# Example input for: Dining Room Flow Planner
+
+- Business context:
+- Constraints:
+- Data / notes:

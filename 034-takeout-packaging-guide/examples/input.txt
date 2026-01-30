@@ -1,0 +1,5 @@
+# Example input for: Takeout Packaging Guide
+
+- Business context:
+- Constraints:
+- Data / notes:
