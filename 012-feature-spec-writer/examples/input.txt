@@ -1,0 +1,5 @@
+# Example input for: Feature Spec Writer
+
+- Context:
+- Constraints:
+- Raw notes:

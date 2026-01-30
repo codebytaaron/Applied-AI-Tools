@@ -1,0 +1,5 @@
+# Example input for: Packing List Generator
+
+- Context:
+- Constraints:
+- Raw notes:

@@ -1,0 +1,5 @@
+# Example input for: Meeting Minutes Formatter
+
+- Context:
+- Constraints:
+- Raw notes:

@@ -1,0 +1,5 @@
+# Example input for: Project Plan Generator
+
+- Context:
+- Constraints:
+- Raw notes:

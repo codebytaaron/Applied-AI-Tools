@@ -1,0 +1,5 @@
+# Example input for: PRD Summarizer
+
+- Context:
+- Constraints:
+- Raw notes:

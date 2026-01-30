@@ -1,0 +1,5 @@
+# Example input for: Gift Idea Generator
+
+- Context:
+- Constraints:
+- Raw notes:
