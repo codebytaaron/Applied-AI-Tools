@@ -1,0 +1,5 @@
+# Example input for: PR Outreach Pitch
+
+- Business context:
+- Constraints:
+- Data / notes:

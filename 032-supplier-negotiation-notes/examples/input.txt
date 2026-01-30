@@ -1,0 +1,5 @@
+# Example input for: Supplier Negotiation Notes
+
+- Business context:
+- Constraints:
+- Data / notes:

@@ -1,0 +1,5 @@
+# Example input for: Kitchen Safety SOP
+
+- Business context:
+- Constraints:
+- Data / notes:

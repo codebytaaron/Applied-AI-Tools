@@ -1,0 +1,5 @@
+# Example input for: Discovery Response Tracker
+
+- Business context:
+- Constraints:
+- Data / notes:

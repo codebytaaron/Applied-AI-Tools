@@ -1,0 +1,5 @@
+# Example input for: Allergen & Dietary Guide
+
+- Business context:
+- Constraints:
+- Data / notes:

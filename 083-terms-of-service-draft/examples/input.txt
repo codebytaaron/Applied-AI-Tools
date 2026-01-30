@@ -1,0 +1,5 @@
+# Example input for: Terms of Service Draft
+
+- Business context:
+- Constraints:
+- Data / notes:
