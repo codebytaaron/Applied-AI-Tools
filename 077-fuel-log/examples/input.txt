@@ -1,0 +1,5 @@
+# Example input for: Fuel Log
+
+- Job context:
+- Constraints:
+- Notes:

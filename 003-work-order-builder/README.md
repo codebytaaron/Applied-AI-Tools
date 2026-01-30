@@ -1,9 +1,9 @@
-# General Template 98
+# Work Order Builder
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Turns notes into clear work orders with steps and safety checks.
 
 ## Run
 ```bash

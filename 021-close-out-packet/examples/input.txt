@@ -1,0 +1,5 @@
+# Example input for: Close‑Out Packet
+
+- Job context:
+- Constraints:
+- Notes:

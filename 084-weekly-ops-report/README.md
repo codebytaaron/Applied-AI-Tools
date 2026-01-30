@@ -1,9 +1,9 @@
-# General Template 98
+# Weekly Ops Report
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Creates weekly ops reports.
 
 ## Run
 ```bash

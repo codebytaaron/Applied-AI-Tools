@@ -1,4 +1,4 @@
-# General Template 98
+# General Template 92
 
 Industry template: **Blue‑Collar Services**
 

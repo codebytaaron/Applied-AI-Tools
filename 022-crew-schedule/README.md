@@ -1,9 +1,9 @@
-# General Template 98
+# Crew Schedule
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Generates weekly crew schedules.
 
 ## Run
 ```bash

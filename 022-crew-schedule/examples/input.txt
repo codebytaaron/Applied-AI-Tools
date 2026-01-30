@@ -1,0 +1,5 @@
+# Example input for: Crew Schedule
+
+- Job context:
+- Constraints:
+- Notes:

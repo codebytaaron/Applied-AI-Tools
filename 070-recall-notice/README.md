@@ -1,9 +1,9 @@
-# General Template 98
+# Recall Notice
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Drafts recall notices.
 
 ## Run
 ```bash

@@ -1,9 +1,9 @@
-# General Template 98
+# Owner Dashboard Notes
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Summarizes owner dashboards.
 
 ## Run
 ```bash

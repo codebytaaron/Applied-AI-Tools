@@ -1,0 +1,5 @@
+# Example input for: Daily Job Brief
+
+- Job context:
+- Constraints:
+- Notes:

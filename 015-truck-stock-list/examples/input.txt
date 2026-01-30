@@ -1,0 +1,5 @@
+# Example input for: Truck Stock List
+
+- Job context:
+- Constraints:
+- Notes:

@@ -1,9 +1,9 @@
-# General Template 98
+# Close‑Out Packet
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Builds close‑out documentation lists.
 
 ## Run
 ```bash

@@ -1,9 +1,9 @@
-# General Template 98
+# Compliance Checklist
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Creates compliance checklists.
 
 ## Run
 ```bash

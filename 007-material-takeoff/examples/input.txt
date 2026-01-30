@@ -1,0 +1,5 @@
+# Example input for: Material Takeoff
+
+- Job context:
+- Constraints:
+- Notes:

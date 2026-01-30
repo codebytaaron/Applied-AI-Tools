@@ -1,9 +1,9 @@
-# General Template 98
+# Material Takeoff
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Estimates materials from scope notes.
 
 ## Run
 ```bash

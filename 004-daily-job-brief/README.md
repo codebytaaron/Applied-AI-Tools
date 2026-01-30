@@ -1,9 +1,9 @@
-# General Template 98
+# Daily Job Brief
 
 Industry template: **Blue‑Collar Services**
 
 ## What it does
-General blue‑collar operations helper.
+Creates morning briefings for crews.
 
 ## Run
 ```bash

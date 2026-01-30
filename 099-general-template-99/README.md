@@ -1,9 +1,9 @@
 # General Template 99
 
-A general-purpose content generator template.
+Industry template: **Blue‑Collar Services**
 
 ## What it does
-Given input, produce a structured, useful output.
+General blue‑collar operations helper.
 
 ## Run
 ```bash
@@ -15,8 +15,8 @@ python main.py --in examples/input.txt --out out.md
 ```
 
 ## Customize
-Edit `prompt.py` to change rules, output format, and style.
+Edit `prompt.py` to adjust rules, tone, and outputs.
 
 ## Notes
-- Defaults to MOCK_MODE so it runs with no API key.
-- Set `MOCK_MODE=false` and add `OPENAI_API_KEY` for real outputs.
+- Runs in MOCK_MODE by default.
+- Set `MOCK_MODE=false` with an API key for real outputs.
