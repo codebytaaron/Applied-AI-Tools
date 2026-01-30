@@ -1,0 +1,5 @@
+# Example input for: Internal SOP: Conflicts Checks
+
+- Business context:
+- Constraints:
+- Data / notes:

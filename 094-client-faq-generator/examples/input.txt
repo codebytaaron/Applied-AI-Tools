@@ -1,0 +1,5 @@
+# Example input for: Client FAQ Generator
+
+- Business context:
+- Constraints:
+- Data / notes:

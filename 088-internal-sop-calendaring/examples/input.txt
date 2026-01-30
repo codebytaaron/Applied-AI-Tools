@@ -1,0 +1,5 @@
+# Example input for: Internal SOP: Calendaring
+
+- Business context:
+- Constraints:
+- Data / notes:

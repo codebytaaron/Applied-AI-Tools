@@ -1,0 +1,5 @@
+# Example input for: Recipe Standardizer
+
+- Business context:
+- Constraints:
+- Data / notes:

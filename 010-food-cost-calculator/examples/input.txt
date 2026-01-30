@@ -1,0 +1,5 @@
+# Example input for: Food Cost Calculator
+
+- Business context:
+- Constraints:
+- Data / notes:

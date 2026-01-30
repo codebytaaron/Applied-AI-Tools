@@ -1,0 +1,5 @@
+# Example input for: Banquet Event Order Writer
+
+- Business context:
+- Constraints:
+- Data / notes:

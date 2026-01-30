@@ -1,0 +1,5 @@
+# Example input for: Loyalty Program Designer
+
+- Business context:
+- Constraints:
+- Data / notes:
