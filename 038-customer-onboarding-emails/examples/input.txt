@@ -1,0 +1,5 @@
+# Example input for: Customer Onboarding Emails
+
+- Context:
+- Constraints:
+- Raw notes:
