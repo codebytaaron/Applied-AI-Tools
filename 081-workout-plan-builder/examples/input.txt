@@ -1,0 +1,5 @@
+# Example input for: Workout Plan Builder
+
+- Context:
+- Constraints:
+- Raw notes:

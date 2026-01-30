@@ -1,0 +1,5 @@
+# Example input for: Workshop Curriculum Builder
+
+- Context:
+- Constraints:
+- Raw notes:

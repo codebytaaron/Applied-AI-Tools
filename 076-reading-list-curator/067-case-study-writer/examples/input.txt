@@ -1,0 +1,5 @@
+# Example input for: Case Study Writer
+
+- Context:
+- Constraints:
+- Raw notes:

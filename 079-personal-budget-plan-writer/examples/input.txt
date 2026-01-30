@@ -1,0 +1,5 @@
+# Example input for: Personal Budget Plan Writer
+
+- Context:
+- Constraints:
+- Raw notes:

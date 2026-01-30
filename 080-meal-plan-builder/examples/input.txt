@@ -1,0 +1,5 @@
+# Example input for: Meal Plan Builder
+
+- Context:
+- Constraints:
+- Raw notes:
