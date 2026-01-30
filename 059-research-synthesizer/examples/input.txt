@@ -1,0 +1,5 @@
+# Example input for: Research Synthesizer
+
+- Context:
+- Constraints:
+- Raw notes:
