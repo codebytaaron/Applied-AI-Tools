@@ -1,0 +1,5 @@
+# Example input for: Referral Outreach Email
+
+- Business context:
+- Constraints:
+- Data / notes:

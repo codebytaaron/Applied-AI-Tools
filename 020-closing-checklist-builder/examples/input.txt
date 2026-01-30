@@ -1,0 +1,5 @@
+# Example input for: Closing Checklist Builder
+
+- Business context:
+- Constraints:
+- Data / notes:

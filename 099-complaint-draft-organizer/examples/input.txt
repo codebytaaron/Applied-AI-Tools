@@ -1,0 +1,5 @@
+# Example input for: Complaint Draft Organizer
+
+- Business context:
+- Constraints:
+- Data / notes:

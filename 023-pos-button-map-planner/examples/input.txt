@@ -1,0 +1,5 @@
+# Example input for: POS Button Map Planner
+
+- Business context:
+- Constraints:
+- Data / notes:
